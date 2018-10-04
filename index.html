@@ -20,6 +20,89 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
+<style>
+			.hovereffect {
+				width: 100%;
+				height: 100%;
+				float: left;
+				overflow: hidden;
+				position: relative;
+				text-align: center;
+				cursor: default;
+			}
+
+			.hovereffect .overlay {
+				position: absolute;
+				overflow: hidden;
+				width: 80%;
+				height: 80%;
+				left: 10%;
+				top: 10%;
+				border-bottom: 1px solid #FFF;
+				border-top: 1px solid #FFF;
+				-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				transition: opacity 0.35s, transform 0.35s;
+				-webkit-transform: scale(0,1);
+				-ms-transform: scale(0,1);
+				transform: scale(0,1);
+			}
+
+			.hovereffect:hover .overlay {
+				opacity: 1;
+				filter: alpha(opacity=100);
+				-webkit-transform: scale(1);
+				-ms-transform: scale(1);
+				transform: scale(1);
+			}
+
+			.hovereffect img {
+				display: block;
+				position: relative;
+				-webkit-transition: all 0.35s;
+				transition: all 0.35s;
+			}
+
+			.hovereffect:hover img {
+				filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+				filter: brightness(0.6);
+				-webkit-filter: brightness(0.6);
+			}
+
+			.hovereffect h2 {
+				text-transform: uppercase;
+				text-align: center;
+				position: relative;
+				font-size: 17px;
+				background-color: transparent;
+				color: #FFF;
+				padding: 1em 0;
+				opacity: 0;
+				filter: alpha(opacity=0);
+				-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				transition: opacity 0.35s, transform 0.35s;
+				-webkit-transform: translate3d(0,-100%,0);
+				transform: translate3d(0,-100%,0);
+			}
+
+			.hovereffect a, .hovereffect p {
+				color: #FFF;
+				padding: 1em 0;
+				opacity: 0;
+				filter: alpha(opacity=0);
+				-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				transition: opacity 0.35s, transform 0.35s;
+				-webkit-transform: translate3d(0,100%,0);
+				transform: translate3d(0,100%,0);
+			}
+
+			.hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+				opacity: 1;
+				filter: alpha(opacity=100);
+				-webkit-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
+
+		</style>
 
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -562,53 +645,165 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<h2 class="colorlib-heading">Gallery</h2>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/mavis.png" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/mavis.png" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 40%">
+									My Shiba Inu: Mavis
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/alfie.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/alfie.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 40%">
+									My Corgi: Alfie
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/chinablue%20(1).jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/chinablue%20(1).jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 40%">
+									ChinaBlue
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/jamjam.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/jamjam.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 40%">
+									JAM.png
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/kcd.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/kcd.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 40%">
+									KCD.png
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/lights%20(1).png" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/lights%20(1).png" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 20%">
+									Los Angeles: Urban Lights
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/em.png" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/em.png" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 20%">
+									My sister, Emily graduating from Stuyvesant.
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/canyon.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/canyon.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 40%">
+									Grand Canyon
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/chapel.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/chapel.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 40%">
+									A chapel in Idaho
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-							<img class="img-fluid img-thumbnail" src="images/airport.png" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/airport.png" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 30%">
+									San Fransisco Airport
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-						<img class="img-fluid img-thumbnail" src="images/tower%20(1).jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/tower%20(1).jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 30%">
+									Japan Town in San Fransisco
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-						<img class="img-fluid img-thumbnail" src="images/fair%20(1).jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/fair%20(1).jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 30%">
+									San Fransisco Exploratorium
+								</p>
+							</div>
+						</div>
 					</div>
-						<div class="col-lg-3 col-md-4 col-xs-6">
-						<img class="img-fluid img-thumbnail" src="images/flower1.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/flower1.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 30%">
+									Small batch of paper flowers
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-						<img class="img-fluid img-thumbnail" src="images/flower2.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/flower2.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 30%">
+									Bigger paper flowers
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-						<img class="img-fluid img-thumbnail" src="images/pig.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/pig.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 30%">
+									Painted a penguin on a cup
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6">
-						<img class="img-fluid img-thumbnail" src="images/piguits.jpg" alt="Avatar" style="border-radius: 50%;">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/piguits.jpg" alt="Avatar" style="border-radius: 50%;">
+							<div class="overlay">
+								<p style="margin-top: 20%">
+									Drew a penguin family on my iPad Pro
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 
